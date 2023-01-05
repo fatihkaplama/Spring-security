@@ -20,13 +20,13 @@ public class UserServiceImplementation implements UserService{
     private final RoleRepo roleRepo;
     @Override
     public User saveUser(User user) {
-        log.info("Saving new user");
+        log.info("Saving new user {}", user.getName());
         return userRepo.save(user);
     }
 
     @Override
     public Role saveRole(Role role) {
-        log.info("Saving new role");
+        log.info("Saving new role {}", role.getName());
         return roleRepo.save(role);
     }
 
